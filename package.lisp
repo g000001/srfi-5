@@ -3,6 +3,7 @@
 (cl:in-package :cl-user)
 
 (defpackage :srfi-5
+  (:use)
   (:export :let))
 
 (defpackage :srfi-5-internal
