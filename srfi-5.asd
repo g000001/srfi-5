@@ -4,7 +4,7 @@
 
 (defsystem :srfi-5
   :serial t
-  :depends-on (:mbe)
+  :depends-on (:mbe :fiveam)
   :components ((:file "package")
                (:file "srfi-5")))
 
@@ -16,4 +16,3 @@
            (funcall (_ :fiveam :explain!) result)
            (funcall (_ :fiveam :results-status) result)))
       (error "test-op failed") ))
-

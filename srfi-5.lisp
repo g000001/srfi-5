@@ -63,12 +63,16 @@
 
     ;; No bindings, name: call a letrec'ed lambda.
     ((let-loop name () (var ***) (val ***) body)
-     (labels ((name (var ***) . body))
+     (labels ((name (var ***)
+                (declare (optimize (debug 0) (space 3)))
+                . body))
        (name val ***)))
 
     ;; Rest binding, name: call a letrec'ed lambda.
     ((let-loop name (rest-var rest-val ***) (var ***) (val ***) body)
-     (labels ((name (var *** . rest-var) . body))
+     (labels ((name (var *** . rest-var)
+                (declare (optimize (debug 0) (space 3)))
+                . body))
        (name val *** rest-val ***)))))
 
 ;;
@@ -83,5 +87,3 @@
                acc
                (fact1 (1- x) (* acc x))))
          3628800)))
-
-
