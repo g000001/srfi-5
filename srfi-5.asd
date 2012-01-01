@@ -4,7 +4,7 @@
 
 (defsystem :srfi-5
   :serial t
-  :depends-on (:mbe :fiveam)
+  :depends-on (:fiveam :mbe)
   :components ((:file "package")
                (:file "srfi-5")))
 
