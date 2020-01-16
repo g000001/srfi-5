@@ -2,11 +2,13 @@
 
 (cl:in-package :cl-user)
 
-(defpackage :srfi-5
+(defpackage "https://github.com/g000001/srfi-5"
   (:use)
   (:export :let))
 
-(defpackage :srfi-5-internal
-  (:use :srfi-5 :cl :fiveam :mbe)
-  (:shadowing-import-from :srfi-5 :let))
+(defpackage "https://github.com/g000001/srfi-5#internals"
+  (:use "https://github.com/g000001/srfi-5"
+        :cl :fiveam :mbe)
+  (:shadowing-import-from "https://github.com/g000001/srfi-5"
+                          :let))
 
